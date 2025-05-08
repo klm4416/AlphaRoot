@@ -1,0 +1,47 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Adjust as needed */
+  padding: 4rem 2rem; /* Example padding */
+  background-color: #e9ecef; /* Example background color */
+  text-align: center; /* Center text for the content area if image is not present or side-by-side */
+}
+
+.content {
+  max-width: 600px; /* Limit content width */
+  text-align: center; /* Center all text content */
+  margin: 0 auto; /* Center the content div itself */
+}
+
+.content h1 {
+  font-size: 2.5rem; /* Example title size */
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.2rem; /* Example subtitle size */
+  margin-bottom: 2rem;
+  color: #6c757d; /* Example text color */
+}
+
+.ctaButton {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #007bff; /* Example button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ctaButton:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.imageContainer {
+  /* Styles for the image container, e.g., width, height, background */
+  /* display: none; If no image initially */
+}
+
+/* Add media queries for responsiveness if needed */

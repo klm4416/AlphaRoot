@@ -1,0 +1,68 @@
+.dashboardContainer {
+  display: flex;
+  height: calc(100vh - 60px); /* Adjust height based on potential header */
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.leftSidebar {
+  width: 250px; /* Adjust width as needed */
+  padding: 1rem;
+  border-right: 1px solid #dee2e6;
+  overflow-y: auto; /* Allow scrolling if content exceeds height */
+  background-color: #ffffff;
+}
+
+.mainContent {
+  flex-grow: 1; /* Takes up remaining space */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.chartHeader {
+    /* Styles for the area above the chart */
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}
+
+.chartArea {
+  flex-grow: 3; /* Give more space to the main chart */
+  min-height: 300px; /* Ensure minimum height */
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  margin-bottom: 1rem;
+  display: flex; /* Center placeholder text */
+  align-items: center; /* Center placeholder text */
+  justify-content: center; /* Center placeholder text */
+}
+
+.volumeChartArea {
+    flex-grow: 1; /* Less space for volume chart */
+    min-height: 100px; /* Ensure minimum height */
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    display: flex; /* Center placeholder text */
+    align-items: center; /* Center placeholder text */
+    justify-content: center; /* Center placeholder text */
+}
+
+.rightSidebar {
+  width: 300px; /* Adjust width as needed */
+  padding: 1rem;
+  border-left: 1px solid #dee2e6;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+/* Add basic styling for headings or placeholders if needed */
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+p {
+    color: #6c757d; /* Placeholder text color */
+} 
