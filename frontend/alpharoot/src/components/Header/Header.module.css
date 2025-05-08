@@ -29,10 +29,50 @@
   color: #007bff; /* Example hover color */
 }
 
+.authButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .authButtons button {
-  margin-left: 0.5rem; /* Space between auth buttons */
   padding: 0.5rem 1rem; /* Example padding */
   cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.loginBtn {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.loginBtn:hover {
+  background-color: #f1f1f1;
+}
+
+.logoutBtn {
+  padding: 0.5rem 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.logoutBtn:hover {
+  background-color: #dc3545;
+  color: white;
+  border-color: #dc3545;
 }
 
 /* Add more specific styles as needed */

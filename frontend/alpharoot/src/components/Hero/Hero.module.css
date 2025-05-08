@@ -9,6 +9,8 @@
 
 .content {
   max-width: 600px; /* Limit content width */
+  text-align: center; /* Center all text content */
+  margin: 0 auto; /* Center the content div itself */
 }
 
 .content h1 {
