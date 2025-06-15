@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styles from './Features.module.css';
 
 // Sample feature data - replace with actual data or fetch from API
@@ -20,21 +20,23 @@ const featuresData = [
   },
 ];
 
-const Features: React.FC = () => {
-  return (
-    <section className={styles.features}>
-      <h2>주요 기능</h2>
-      <div className={styles.featuresGrid}>
-        {featuresData.map((feature, index) => (
-          <div key={index} className={styles.featureCard}>
-            <div className={styles.icon}>{feature.icon}</div>
-            <h3>{feature.title}</h3>
-            <p>{feature.description}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
+class Features extends Component {
+  render() {
+    return (
+      <section className={styles.features}>
+        <h2>주요 기능</h2>
+        <div className={styles.featuresGrid}>
+          {featuresData.map((feature, index) => (
+            <div key={index} className={styles.featureCard}>
+              <div className={styles.icon}>{feature.icon}</div>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
+}
 
 export default Features;

@@ -1,0 +1,107 @@
+.surveyContainer {
+  max-width: 480px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 40px 30px 30px 30px;
+}
+
+.surveyForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="number"],
+.formGroup select {
+  padding: 10px 14px;
+  border: 1.5px solid #e1e5e9;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f8f9fa;
+  transition: border 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  border-color: #667eea;
+  outline: none;
+  background: #fff;
+}
+
+.industries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.industryOption {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.98rem;
+  background: #f3f4f6;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.error {
+  color: #dc3545;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  font-size: 0.97rem;
+}
+
+.success {
+  color: #28a745;
+  background: #eafbe7;
+  border: 1px solid #b6e2c6;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-top: 12px;
+  font-size: 0.97rem;
+  text-align: center;
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 14px 0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6d3fa2 100%);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .surveyContainer {
+    padding: 20px 8px 18px 8px;
+  }
+} 

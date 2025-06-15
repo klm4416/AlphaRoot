@@ -1,46 +1,145 @@
-# Getting Started with Create React App
+# AlphaRoot Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+AI 기반 주식 추천 서비스 **AlphaRoot**의 프론트엔드 애플리케이션입니다.
 
-## Available Scripts
+## 🚀 프로젝트 개요
 
-In the project directory, you can run:
+AlphaRoot는 개인화된 주식 추천을 제공하는 웹 애플리케이션입니다. 사용자의 투자 성향을 분석하여 최적의 종목을 추천하고, 상세한 재무 정보와 공시 자료를 제공합니다.
 
-### `npm start`
+## 📋 주요 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **AI 맞춤 주식 추천**: 사용자별 개인화된 종목 추천
+- **실시간 주식 정보**: 현재가, 시가총액, 배당수익률 등 주요 지표
+- **재무 정보 분석**: 매출, 순이익, PER, PBR 등 상세 재무 데이터
+- **공시 정보**: 기업의 주요 공시 사항 및 뉴스
+- **사용자 인증**: 회원가입 및 로그인 기능
+- **반응형 디자인**: 모바일 및 데스크톱 지원
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🛠️ 기술 스택
 
-### `npm test`
+- **Frontend**: React 19.1.0 + TypeScript
+- **라우팅**: React Router DOM 7.5.3
+- **스타일링**: CSS Modules
+- **테스팅**: Jest + React Testing Library
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 설치 및 실행
 
-### `npm run build`
+### 1. 의존성 설치
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+cd frontend/alpharoot
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. 개발 서버 실행
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+개발 서버가 실행되면 http://localhost:3000에서 확인할 수 있습니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 3. 기타 명령어
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# 프로덕션 빌드
+npm run build
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# 테스트 실행
+npm test
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# React 앱 설정 추출 (고급 사용자용)
+npm run eject
+```
 
-## Learn More
+## 🔐 데모 계정
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+개발용 Mock 데이터가 준비되어 있습니다:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **이메일**: test@example.com
+- **비밀번호**: password
+
+## 📱 주요 화면
+
+### 1. 로그인/회원가입
+- 깔끔한 인터페이스의 인증 시스템
+- 데모 계정 정보 제공
+
+### 2. 대시보드
+- **AI 추천**: 개인화된 주식 추천 목록
+- **관심 종목**: 즐겨찾기 종목 관리 (준비 중)
+- **시장 현황**: 전체 시장 동향
+
+### 3. 주식 상세 정보
+- **개요**: 기업 기본 정보 및 투자 포인트
+- **재무정보**: 상세 재무 데이터 및 지표
+- **공시정보**: 최신 공시 및 뉴스
+
+## 🎨 UI/UX 특징
+
+- **현대적 디자인**: 깔끔하고 직관적인 인터페이스
+- **카드 기반 레이아웃**: 정보의 가독성 향상
+- **색상 시스템**: 
+  - 매수 추천: 초록색
+  - 매도 추천: 빨간색
+  - 보유 추천: 파란색
+- **애니메이션**: 부드러운 전환 효과 및 호버 애니메이션
+- **반응형**: 모든 디바이스에서 최적화된 경험
+
+## 📊 Mock 데이터
+
+실제 API 없이도 테스트할 수 있도록 다음 Mock 데이터를 제공합니다:
+
+- **주식 데이터**: 삼성전자, SK하이닉스, NAVER, 카카오 등 6개 종목
+- **추천 데이터**: 4개의 AI 추천 종목 (신뢰도, 추천 이유 포함)
+- **재무 데이터**: 2023년 4분기 실적 정보
+- **공시 데이터**: 최신 공시 사항
+
+## 🔄 상태 관리
+
+- **로컬 스토리지**: 로그인 상태 및 사용자 정보 저장
+- **React Hooks**: useState, useEffect를 활용한 컴포넌트 상태 관리
+- **라우팅**: React Router를 통한 페이지 네비게이션
+
+## 📁 프로젝트 구조
+
+```
+src/
+├── components/         # 재사용 가능한 컴포넌트
+├── pages/             # 페이지 컴포넌트
+│   ├── LoginPage/     # 로그인 페이지
+│   ├── RegisterPage/  # 회원가입 페이지
+│   └── StockDetailPage/ # 주식 상세 페이지
+├── data/              # Mock 데이터
+├── types/             # TypeScript 타입 정의
+├── styles/            # 공통 스타일 (CSS Modules)
+└── utils/             # 유틸리티 함수
+```
+
+## 🎯 향후 계획
+
+- [ ] 주식 차트 추가 (Chart.js 또는 Recharts)
+- [ ] 실시간 데이터 연동
+- [ ] 포트폴리오 관리 기능
+- [ ] 알림 시스템
+- [ ] 다크 모드 지원
+- [ ] PWA (Progressive Web App) 지원
+
+## 🐛 문제 해결
+
+### 자주 발생하는 문제
+
+1. **포트 충돌**: 3000번 포트가 사용 중인 경우 다른 포트로 실행됩니다.
+2. **의존성 문제**: `npm install` 후에도 문제가 있다면 `node_modules` 삭제 후 재설치하세요.
+
+## 📞 지원
+
+문제나 제안사항이 있으시면 다음 연락처로 문의해주세요:
+
+- **작성자**: 김지광
+- **이메일**: 5244416@naver.com
+- **소속**: 영남대학교
+
+---
+
+**AlphaRoot** - AI가 추천하는 스마트한 투자의 시작 🌱
