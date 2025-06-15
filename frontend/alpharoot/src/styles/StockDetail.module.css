@@ -1,0 +1,567 @@
+.stockDetail {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.backButton {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+  color: white;
+  text-decoration: none;
+}
+
+.stockInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stockName {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.ticker {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.priceInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.currentPrice {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.priceChange {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.positive {
+  color: #28a745;
+}
+
+.negative {
+  color: #dc3545;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.tabNavigation {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.tabButton {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tabButton:hover {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.tabButton.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.tabButton.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: white;
+}
+
+.tabContent {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.infoSection {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.infoSection h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.infoValue {
+  color: #333;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.description {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.description h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.description p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.financialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.financialSection {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.financialSection h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.financialTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.financialTable th,
+.financialTable td {
+  padding: 12px 8px;
+  text-align: right;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.9rem;
+}
+
+.financialTable th {
+  background-color: #e9ecef;
+  color: #495057;
+  font-weight: 600;
+  text-align: left;
+}
+
+.financialTable th:first-child {
+  text-align: left;
+}
+
+.financialTable td {
+  color: #333;
+}
+
+.financialTable tr:hover {
+  background-color: rgba(102, 126, 234, 0.05);
+}
+
+.disclosureList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.disclosureItem {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.disclosureHeader {
+  display: flex;
+  justify-content: between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  gap: 15px;
+}
+
+.disclosureTitle {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.disclosureDate {
+  color: #666;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.disclosureContent {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: #dc3545;
+  text-align: center;
+}
+
+.error button {
+  background-color: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.error button:hover {
+  background-color: #5a6fd8;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.emptyState p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .stockInfo {
+    align-items: center;
+  }
+  
+  .priceInfo {
+    justify-content: center;
+  }
+  
+  .content {
+    padding: 20px 15px;
+  }
+  
+  .tabNavigation {
+    flex-direction: column;
+  }
+  
+  .tabButton {
+    padding: 15px;
+  }
+  
+  .tabContent {
+    padding: 20px;
+  }
+  
+  .overviewGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .financialGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .financialTable {
+    font-size: 0.8rem;
+  }
+  
+  .financialTable th,
+  .financialTable td {
+    padding: 8px 4px;
+  }
+  
+  .disclosureHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+.tabs {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab:hover {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: white;
+}
+
+.priceSection {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.keyMetrics {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.keyMetrics h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.metricLabel {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.metricValue {
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.investmentPoints {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.investmentPoints h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.investmentPoints ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.investmentPoints li {
+  margin-bottom: 8px;
+}
+
+.companyOverview {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.companyOverview h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.companyOverview p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.mainContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.disclosureSection {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.disclosureSection h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.industry {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+} 

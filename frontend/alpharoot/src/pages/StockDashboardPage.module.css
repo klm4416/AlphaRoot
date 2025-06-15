@@ -1,0 +1,409 @@
+.dashboardContainer {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboardHeader {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0;
+}
+
+.welcomeText {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dashboardMain {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.leftSidebar {
+  width: 250px;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px 0;
+}
+
+.tabNav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 16px;
+}
+
+.tabButton {
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tabButton:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.activeTab {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.activeTab:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.sectionHeader {
+  margin-bottom: 24px;
+}
+
+.sectionHeader h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.sectionSubtitle {
+  color: #6b7280;
+  font-size: 16px;
+  margin: 0;
+}
+
+.recommendationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+.recommendationCard {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recommendationCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.stockInfo {
+  flex: 1;
+}
+
+.stockName {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.stockTicker {
+  color: #6b7280;
+  font-size: 14px;
+  margin-right: 12px;
+}
+
+.stockIndustry {
+  color: #8b5cf6;
+  font-size: 12px;
+  background-color: #f3e8ff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.recommendationType {
+  margin-left: 16px;
+}
+
+.stockDetails {
+  margin-bottom: 16px;
+}
+
+.priceInfo {
+  margin-bottom: 12px;
+}
+
+.currentPrice {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.targetPrice {
+  font-size: 14px;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.stockMetrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metricLabel {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.metricValue {
+  font-size: 14px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.recommendationReason {
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.recommendationReason h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 8px 0;
+}
+
+.recommendationReason p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.confidenceScore {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.confidenceLabel {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+  min-width: 50px;
+}
+
+.confidenceBar {
+  flex: 1;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.confidenceFill {
+  height: 100%;
+  background: linear-gradient(90deg, #ef4444 0%, #f59e0b 50%, #10b981 100%);
+  transition: width 0.3s ease;
+}
+
+.confidenceValue {
+  font-size: 14px;
+  color: #111827;
+  font-weight: 600;
+  min-width: 40px;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acceptanceStatus {
+  margin-right: 16px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.actionButtons button {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.marketGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.marketCard {
+  padding: 20px;
+}
+
+.marketStockHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.marketStockName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.marketStockTicker {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.marketStockPrice {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.marketStockInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.comingSoon {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.comingSoon p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .dashboardMain {
+    flex-direction: column;
+  }
+  
+  .leftSidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .tabNav {
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 16px 16px 16px;
+  }
+  
+  .tabButton {
+    white-space: nowrap;
+    min-width: max-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardHeader {
+    padding: 12px 16px;
+  }
+  
+  .headerLeft {
+    gap: 16px;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .welcomeText {
+    font-size: 14px;
+  }
+  
+  .mainContent {
+    padding: 16px;
+  }
+  
+  .recommendationsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .marketGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stockMetrics {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .cardActions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .actionButtons {
+    justify-content: stretch;
+  }
+} 
